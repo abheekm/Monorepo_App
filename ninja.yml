@@ -16,5 +16,5 @@ settings:
     - name: Sample
       condition: buildSucceeds
       paths:
-        - apps\client\src\components
-        - apps\client\src\libs
+        - apps/client/src/components
+        - apps/client/src/libs

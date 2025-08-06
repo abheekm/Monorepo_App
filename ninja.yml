@@ -1,0 +1,20 @@
+name: Monorepo_App_YML
+description: This is Monorepo_App_YML sample
+version: 1.0
+settings:
+  build-steps:
+    - name: Install, Build and Test
+      key: runner_cmd
+      disabled: false
+      workDir: ''
+      args:
+        commands: |- 
+          pnpm install
+          pnpm build
+          pnpm test
+  artifacts:
+    - name: Sample
+      condition: buildSucceeds
+      paths:
+        - apps\client\src\components
+        - apps\client\src\libs

@@ -1,0 +1,31 @@
+name: Monorepo_App_Public
+description: ""
+settings:
+  build-steps:
+  - key: runner_cmd
+    name: Install
+    disabled: false
+    workDir: ""
+    args:
+      commands: pnpm install
+    argsProtected: {}
+  - key: runner_cmd
+    name: Build
+    disabled: false
+    workDir: ""
+    args:
+      commands: pnpm build
+    argsProtected: {}
+  - key: runner_cmd
+    name: Test
+    disabled: false
+    workDir: ""
+    args:
+      commands: pnpm test
+    argsProtected: {}
+  artifacts:
+  - name: Sample
+    condition: buildSucceeds
+    paths:
+    - dist
+    - libs/utils/src/namespaces/tests

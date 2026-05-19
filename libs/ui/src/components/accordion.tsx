@@ -1,7 +1,7 @@
 import { CaretDown } from "@phosphor-icons/react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { cn } from "@reactive-resume/utils";
-import { forwardRef } from "react";
+// import { forwardRef } from "react";
 
 export const Accordion = AccordionPrimitive.Root;
 
@@ -24,11 +24,11 @@ export const AccordionTrigger = forwardRef<
       className={cn(
         "flex flex-1 items-center justify-between py-4 font-medium leading-none outline-none transition-all hover:underline focus-visible:bg-secondary-accent [&[data-state=open]>svg]:rotate-180",
         className,
-      )}
+      )
       {...props}
     >
       {children}
-      <CaretDown className="size-4 shrink-0 transition-transform duration-200" />
+      <CaretDown className="size-4 shrink-0 transition-transform duration-200">
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -47,7 +47,7 @@ export const AccordionContent = forwardRef<
     )}
     {...props}
   >
-    <div className="pb-4 pt-0">{children}</div>
+    {/* <div className="pb-4 pt-0">{children}</div> */}
   </AccordionPrimitive.Content>
 ));
 

@@ -14,8 +14,7 @@
     "url": "https://github.com/AmruthPillai/Reactive-Resume.git"
   },
   "scripts": {
-    "dev": "nx run-many -t serve",
-    "test": "pnpm vitest run",
+    "test": "pnpm vitest run"
     "prebuild": "pnpm prisma:generate",
     "build": "nx run-many -t build",
     "prestart": "pnpm prisma:migrate",

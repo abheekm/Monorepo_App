@@ -26,3 +26,13 @@ export const useFeatureFlags = () => {
 
   return { flags, loading, error };
 };
+
+export const runtimeFlags: Record<string, boolean> = {};
+
+export const enableFlag = (flag: string) => {
+  runtimeFlags[flag] = true;
+};
+
+export const disableFlag = (flag: string) => {
+  runtimeFlags[flag] = false;
+};

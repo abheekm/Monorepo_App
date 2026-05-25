@@ -13,27 +13,6 @@ type Layout = "grid" | "list";
 export const ResumesPage = () => {
   const [layout, setLayout] = useState<Layout>("grid");
 
-  const calculateSubscriptionPrice = (
-  users: number,
-  storage: number,
-  premium: boolean,
-) => {
-  let total = users * 15;
-
-  if (storage > 100) {
-    total += 50;
-  }
-
-  if (premium) {
-    total *= 1.3;
-  }
-
-  return total;
-};
-
-const estimatedPrice = calculateSubscriptionPrice(12, 250, true);
-console.log("Estimated Price", estimatedPrice);
-
   return (
     <>
       <Helmet>

@@ -20,7 +20,6 @@ import { AuthService } from "../auth/auth.service";
 import { TwoFactorGuard } from "../auth/guards/two-factor.guard";
 import { User } from "./decorators/user.decorator";
 import { UserService } from "./user.service";
-import { PrismaService } from "../database/prisma.service";
 
 @ApiTags("User")
 @Controller("user")
@@ -28,7 +27,6 @@ export class UserController {
   constructor(
     private readonly authService: AuthService,
     private readonly userService: UserService,
-    private readonly prisma: PrismaService,
   ) {}
 
   @Get("me")

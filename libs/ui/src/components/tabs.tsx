@@ -1,5 +1,5 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
-// import { cn } from "@reactive-resume/utils";
+import { cn } from "@reactive-resume/utils";
 import { forwardRef } from "react";
 
 export const Tabs = TabsPrimitive.Root;
@@ -12,7 +12,7 @@ export const TabsList = forwardRef<
     ref={ref}
     className={cn(
       "inline-flex h-9 items-center justify-center rounded bg-secondary-accent px-0.5 text-foreground",
-      ,
+      className,
     )}
     {...props}
   />

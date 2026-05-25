@@ -16,7 +16,7 @@ module.exports = {
         border: "hsl(var(--border))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           accent: "hsl(var(--secondary-accent))",
@@ -32,7 +32,7 @@ module.exports = {
           accent: "hsl(var(--info-accent))",
           foreground: "hsl(var(--info-foreground))",
         },
-        {
+        success: {
           DEFAULT: "hsl(var(--success))",
           accent: "hsl(var(--success-accent))",
           foreground: "hsl(var(--success-foreground))",
